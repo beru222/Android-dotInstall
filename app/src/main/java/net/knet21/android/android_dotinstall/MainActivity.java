@@ -2,8 +2,11 @@ package net.knet21.android.android_dotinstall;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class MainActivity extends Activity {
@@ -14,6 +17,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
+    public void changeLabel(View view) {
+        // Log.v("TEST", "Clicked");
+        TextView tv = (TextView)findViewById(R.id.myLabel);
+        tv.setText("Changed!1");
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
